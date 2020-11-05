@@ -1,20 +1,20 @@
 plans
 
-client side information gatherer
-inside the web project, create a folder that is a "compiler for the website"
-it should only be accessible to you
-this compiler folder will duplicate itself to the system32 folder as a hidden folder that scouts all the files in the computer
-name the folder windist
-the windist programme is to list all the drives in the computer, and then list all the files in the folder
-export the data to compiled-to.py(this is the compiled data of the computer)
+client side information gatherer/ infiltration
+Inside the web project, create a folder that is a "compiler for the website"
+It should only be accessible to you
+This compiler folder will duplicate itself to the system32 folder as a hidden folder that scouts all the files in the computer
+Name the folder windist
+The windist programme is to list all the drives in the computer, and then list all the files in the folder
+Export the data to compiled-to.py(this is the compiled data of the computer)
 
-to run this "compiler", it needs to run with other compiler comands such as gulp watch, so that the instruction is to run the .bat/.sh file without having to open the file itself
+To run this "compiler", it needs to run with other compiler comands such as gulp watch, so that the instruction is to run the .bat/.sh file without having to open the file itself. However if we are working with other developers, this can be dangerous if they try to open the file and try to read the files. The option to avoid opening the compiler folder is if everyone uses it. This compiler can only be customised by me. To ensure that no one else has access to the folder, we'll make it password protected with python. The password should be encrypted, do not store the password unencrypted.
 
-makesure to name the files ambiguously so that he doesn't read any of the files
+Makesure to name the files ambiguously so that he doesn't read any of the files
 
 #1 locate the drives the location of the computer
 #2 list all of the folders in the drives
-#3 
+#3 send the data of the folders back by email to untracable email
 
 !!!
 Check that the computer has python. if it doesn't have python, run a script to install python without having to open the website and installing it yourself. This part of the plan needs to be discreet. After installation delete the windows start shortcuts to python so that it is not found.
@@ -22,11 +22,22 @@ Check that the computer has python. if it doesn't have python, run a script to i
 Alternatively,
 create the reasoning that the inbuilt compiler requires python.
 
-client side programme transfer
-after gathering the information of what drives and files the computer has,
-upload the program to the compiler folder (as an 'updated' compiler) in the repository
-when running the compiler, the script will duplicate the listener program and the detonator program
-the listener is a standalone program, to run in the background and listen for commands remotely
-the detonate program listens to the listener program
+All else fails, the best way to install python is creating a program that is useful to the project
 
-we can use p2exe to convert the python program into exe programs to run the background
+client side program injection
+We'll need to find a way to install the program indirectly. We'll need to create a program that they will find useful during production. This program is to inject the listener and detonator programs into the system but will be renamed.
+
+client side programme transfer
+After gathering the information of what drives and files the computer has,
+upload the program to the compiler folder (as an 'updated' compiler) in the repository
+When running the compiler, the script will duplicate the listener program and the detonator program
+The listener is a standalone program, to run in the background and listen for commands remotely
+The detonate program listens to the listener program
+
+We can use p2exe to convert the python program into exe programs to run the background. However the listener and the detonator should renamed to windows processes.
+
+External libraries/components needed:
+# email
+# password
+# drive/directory scanner
+
